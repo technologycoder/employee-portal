@@ -9,17 +9,18 @@ class Employee {
 	Date hireDate
 	BigDecimal salary
 	BigDecimal commissionPct
-	Job jobs
-	Department departments
-	Employee employees
+	Job job
+	Department department
+	Employee manager
 
-	static hasMany = [departmentses: Department,
-	                  employeeses: Employee,
+	static hasMany = [employees: Employee,
 	                  jobHistories: JobHistory]
 	static belongsTo = [Department, Job]
 
 	static mapping = {
+		table 'EMPLOYEES'
 		id column: "EMPLOYEE_ID", generator: "assigned"
+		hireDate sqlType: "date"
 		version false
 	}
 

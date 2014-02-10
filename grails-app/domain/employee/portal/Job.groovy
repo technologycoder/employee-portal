@@ -7,10 +7,11 @@ class Job {
 	Integer minSalary
 	Integer maxSalary
 
-	static hasMany = [employeeses: Employee,
+	static hasMany = [employees: Employee,
 	                  jobHistories: JobHistory]
 
 	static mapping = {
+		table 'JOBS'
 		id name: "jobId", generator: "assigned"
 		version false
 	}

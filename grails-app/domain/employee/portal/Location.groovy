@@ -7,13 +7,15 @@ class Location {
 	String postalCode
 	String city
 	String stateProvince
-	Country countries
+	Country country
 
-	static hasMany = [departmentses: Department]
+	static hasMany = [departments: Department]
 	static belongsTo = [Country]
 
 	static mapping = {
+		table 'LOCATIONS'
 		id name: "locationId", generator: "assigned"
+		country column: "COUNTRY_ID", sqlType: "char", length: 2
 		version false
 	}
 

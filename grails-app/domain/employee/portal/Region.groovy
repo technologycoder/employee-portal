@@ -5,9 +5,10 @@ class Region {
 	BigDecimal regionId
 	String regionName
 
-	static hasMany = [countrieses: Country]
+	static hasMany = [countries: Country]
 
 	static mapping = {
+		table 'REGIONS'
 		id name: "regionId", generator: "assigned"
 		version false
 	}

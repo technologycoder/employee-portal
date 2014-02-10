@@ -8,9 +8,9 @@ class JobHistory implements Serializable {
 	Integer employeeId
 	Date startDate
 	Date endDate
-	Employee employees
-	Job jobs
-	Department departments
+	//Employee employee
+	Job job
+	Department department
 
 	int hashCode() {
 		def builder = new HashCodeBuilder()
@@ -30,7 +30,10 @@ class JobHistory implements Serializable {
 	static belongsTo = [Department, Employee, Job]
 
 	static mapping = {
+		table 'JOB_HISTORY'
 		id composite: ["employeeId", "startDate"]
+		startDate sqlType: "date"
+		endDate sqlType: "date"
 		version false
 	}
 }

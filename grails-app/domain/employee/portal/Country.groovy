@@ -4,12 +4,14 @@ class Country {
 
 	String countryId
 	String countryName
-	Region regions
+	Region region
 
-	static hasMany = [locationses: Location]
+	static hasMany = [locations: Location]
 	static belongsTo = [Region]
 
 	static mapping = {
+		table 'COUNTRIES'
+		countryId column: "COUNTRY_ID", sqlType: "char", length: 2
 		id name: "countryId", generator: "assigned"
 		version false
 	}

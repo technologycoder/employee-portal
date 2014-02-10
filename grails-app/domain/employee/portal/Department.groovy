@@ -4,15 +4,17 @@ class Department {
 
 	Short departmentId
 	String departmentName
-	Employee employees
-	Location locations
+	Employee manager
+	Location location
 
-	static hasMany = [employeeses: Employee,
+	static hasMany = [employees: Employee,
 	                  jobHistories: JobHistory]
-	static belongsTo = [Employee, Location]
+	static belongsTo = [Location]
 
 	static mapping = {
+		table 'DEPARTMENTS'
 		id name: "departmentId", generator: "assigned"
+		manager column: 'manager_id'
 		version false
 	}
 
