@@ -1,6 +1,6 @@
 package employee.portal
 
-class Employees {
+class Employee {
 
 	String firstName
 	String lastName
@@ -9,14 +9,14 @@ class Employees {
 	Date hireDate
 	BigDecimal salary
 	BigDecimal commissionPct
-	Jobs jobs
-	Departments departments
-	Employees employees
+	Job jobs
+	Department departments
+	Employee employees
 
-	static hasMany = [departmentses: Departments,
-	                  employeeses: Employees,
+	static hasMany = [departmentses: Department,
+	                  employeeses: Employee,
 	                  jobHistories: JobHistory]
-	static belongsTo = [Departments, Jobs]
+	static belongsTo = [Department, Job]
 
 	static mapping = {
 		id column: "EMPLOYEE_ID", generator: "assigned"

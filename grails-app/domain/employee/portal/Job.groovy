@@ -1,13 +1,13 @@
 package employee.portal
 
-class Jobs {
+class Job {
 
 	String jobId
 	String jobTitle
 	Integer minSalary
 	Integer maxSalary
 
-	static hasMany = [employeeses: Employees,
+	static hasMany = [employeeses: Employee,
 	                  jobHistories: JobHistory]
 
 	static mapping = {

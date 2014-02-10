@@ -1,16 +1,16 @@
 package employee.portal
 
-class Locations {
+class Location {
 
 	Short locationId
 	String streetAddress
 	String postalCode
 	String city
 	String stateProvince
-	Countries countries
+	Country countries
 
-	static hasMany = [departmentses: Departments]
-	static belongsTo = [Countries]
+	static hasMany = [departmentses: Department]
+	static belongsTo = [Country]
 
 	static mapping = {
 		id name: "locationId", generator: "assigned"

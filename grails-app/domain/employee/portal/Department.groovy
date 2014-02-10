@@ -1,15 +1,15 @@
 package employee.portal
 
-class Departments {
+class Department {
 
 	Short departmentId
 	String departmentName
-	Employees employees
-	Locations locations
+	Employee employees
+	Location locations
 
-	static hasMany = [employeeses: Employees,
+	static hasMany = [employeeses: Employee,
 	                  jobHistories: JobHistory]
-	static belongsTo = [Employees, Locations]
+	static belongsTo = [Employee, Location]
 
 	static mapping = {
 		id name: "departmentId", generator: "assigned"

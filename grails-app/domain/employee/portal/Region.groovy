@@ -1,11 +1,11 @@
 package employee.portal
 
-class Regions {
+class Region {
 
 	BigDecimal regionId
 	String regionName
 
-	static hasMany = [countrieses: Countries]
+	static hasMany = [countrieses: Country]
 
 	static mapping = {
 		id name: "regionId", generator: "assigned"

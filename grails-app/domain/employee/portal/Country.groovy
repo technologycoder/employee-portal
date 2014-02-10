@@ -1,13 +1,13 @@
 package employee.portal
 
-class Countries {
+class Country {
 
 	String countryId
 	String countryName
-	Regions regions
+	Region regions
 
-	static hasMany = [locationses: Locations]
-	static belongsTo = [Regions]
+	static hasMany = [locationses: Location]
+	static belongsTo = [Region]
 
 	static mapping = {
 		id name: "countryId", generator: "assigned"
