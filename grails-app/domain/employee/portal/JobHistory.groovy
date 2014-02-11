@@ -5,10 +5,10 @@ import org.apache.commons.lang.builder.HashCodeBuilder
 
 class JobHistory implements Serializable {
 
-	Integer employeeId
+	//Integer employeeId
 	Date startDate
 	Date endDate
-	//Employee employee
+	Employee employee
 	Job job
 	Department department
 
@@ -31,7 +31,7 @@ class JobHistory implements Serializable {
 
 	static mapping = {
 		table 'JOB_HISTORY'
-		id composite: ["employeeId", "startDate"]
+		id composite: ["employee", "startDate"]
 		startDate sqlType: "date"
 		endDate sqlType: "date"
 		version false
