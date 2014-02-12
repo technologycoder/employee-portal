@@ -9,12 +9,9 @@ import spock.lang.Specification
 @TestFor(Region)
 class RegionsSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
 
     void "test something"() {
+		expect:
+		true
     }
 }

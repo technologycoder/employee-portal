@@ -72,8 +72,11 @@ grails.project.dependency.resolution = {
 		environments {
 			development {
 				runtime ':db-reverse-engineer:0.5'
-			}			
-		}
-		
+			}
+			test {
+				//grails.plugin.excludes='db-reverse-engineer'
+				runtime ':db-reverse-engineer:0.5'
+			}
+		}		
     }
 }
