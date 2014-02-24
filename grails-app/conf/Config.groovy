@@ -130,3 +130,5 @@ environments {
 		
 	}
 }
+
+grails.app.context = "/"
